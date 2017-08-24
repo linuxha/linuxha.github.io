@@ -1,0 +1,561 @@
+/*
+** This is my new USHA site template njc - 2009/09/04
+**
+** #FFCC99 <- Linuxha
+** #009999 <- USHA
+*/
+
+/*
+** This still doesn't complete work well with IE6
+*/
+/* =[ IE-isms ]============================================================ */
+
+    /*
+    ** html, body .header and .rest work fine with IE when a comment
+    ** os left on the first line otherwise it fails!
+    */
+			   /* */
+    * html div.scrollable{ /* */
+	height:100%;	   /* */
+	overflow:auto;	   /* */
+    }			   /* */
+    * html div.back {
+	bottom:0.2em;
+    }
+    * html div.head {
+	bottom:0;
+    }
+    * html body{	   /* */
+	overflow:hidden;   /* */
+    }			   /* */
+
+/* ======================================================================== */
+
+    /*
+    ** These work fine for Firefox
+    */
+    html {
+	height:100%; 
+	max-height:100%; 
+	padding:0; 
+	margin:0; 
+	border:0;
+	background:#23A7AF; /* only changes the color between the bar and content */
+	/*background:#009999; /* only changes the color between the bar and content */
+	color: #000000;
+	font-family:georgia, palatino linotype, times new roman, serif;
+	/* hide overflow:hidden from IE5/Mac */ 
+	/* \*/ 
+	overflow: hidden; 
+	/* */ 
+    }
+
+    a:link {
+	color: #0000FF;
+    }
+
+    a:visited {
+	color: #992200;
+    }
+/*
+    a:hover {
+	color: ;
+    }
+*/
+    body {
+    }
+
+    /*
+    ** Background image for the nav line
+    */
+    .bg_image {
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	z-index: 0;
+    }
+
+    /*
+    ** Add header section
+    */
+    .header {
+    }
+
+    .p16 {
+	line-height: .8; /* Why did I do this? 80% */
+	font-size: 24pt;
+	font-weight: bold;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+    }
+
+    .p22 {
+	line-height: .8; /* Why did I do this? 80% */
+	font-size: 22pt;
+	font-weight: bold;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+    }
+
+    /*
+    ** I put the image here, stretched to fill
+    */
+    .back {
+	position:absolute;
+	border:0;
+	margin:0;
+	top:0;/* */
+	left:0;
+	display:block;
+	width:100%;
+	height:2em; /* */
+	color: black;
+	background:#23A7AF; /* only changes the color between the bar and content */
+	/*background-color: #009999; /* #FFCC99; /* */
+	z-index:5; /* */
+    }
+
+    /*
+    ** This is where I'll add the sitenav 'stuff'
+    */
+    .head {
+	position:absolute;
+	border:0;
+	margin:0;
+	top:0;/* */
+	left:0;
+	display:block;
+	width:100%;
+	height:2em; /* */
+	color: black;
+	z-index:6; /* */
+    }
+
+    /*
+    ** Everything else, such as the real content
+    ** Careful! The scroll bar exists here. Adjust margins and padding
+    ** in the main div (below)
+    */
+    .scrollable {
+	clear: both;
+	position:absolute;
+	left:0;
+	top:2.1em; /* 2.33 header */
+	bottom:0em; /* footer (not defined */
+	width:100%;
+	font-size:1em;
+	z-index:4; /* */
+	overflow:auto; /* */
+	background:#23A7AF; /* only changes the color between the bar and content */
+	/*background:#009999; /* only changes the color between the bar and content */
+	color: #000000;
+	border-bottom: black groove; /* */
+    }
+
+    /*
+    ** This fixes the scroll bar problem - where is gets moved off the page if
+    ** you adjust margins or padding, make adjustments to margins and padding
+    ** here
+    **
+    ** head/main - I think we want head and main divs to touch
+    **
+    */
+    .main {
+	position: relative; /* new */
+	padding: 1em;
+	padding-top: 0;     /* new */
+    }
+ 
+/* =[ Header left and right ]============================================== */
+
+.hleft {
+	border-style: none;
+	width: 300px;
+	float: left;
+	text-align: center;
+
+	display: block;
+	margin-top: 0.5em;
+}
+
+.hright {
+	padding: 10px;
+	margin-left: 310px;
+	clear: right;
+/*	z-index: -1; /* */
+}
+
+
+/* ======================================================================== */
+
+/*
+** Google leader board
+*/
+ .leaderboard {
+	display: block;
+	clear: both;
+	width: 728px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center; /* */
+}
+
+.google {
+	border:none;
+	text-decoration: none;	  /* border= "0" originally in the HTML tag */
+}
+
+/* =[ Sitenav ]============================================================ */
+
+.sitenav ul {
+	padding: 3px 0; 
+	margin-left: 0; 
+	border-bottom: 1px solid black; 
+	font: bold 12px Verdana, sans-serif; 
+	color: black;
+	z-index:6; /* */
+}
+
+* html div.sitenav ul {
+	padding: .5em; 
+	margin-top: 0; 
+	margin-left: 0; 
+	border-bottom: 1px solid black; 
+	font: bold 12px Verdana, sans-serif; 
+	color: black;
+	z-index:6; /* */
+}
+
+.sitenav ul li {
+	list-style: none; 
+	margin: 0; 
+	display: inline; 
+}
+
+.sitenav ul li a {
+	padding: 3px 0.5em; 
+	margin-left: 3px; 
+	text-decoration: none; 
+}
+
+.sitenav ul li a:link { 
+	color: black;
+} 
+
+.sitenav ul li a:visited { 
+	color: #000066;
+} 
+
+.sitenav ul li a:link:hover, .sitenav ul li a:visited:hover {
+	color: red; /* */
+}
+
+.sitenav ul li a.current {
+	color: maroon;
+	border: 1px solid black;
+	border-bottom: 1px solid #23A7AF; /* only changes the color between the bar and content */
+	/* border-bottom: 1px solid #009999; /* #FFCC66; /* */
+}
+
+
+* html div.sitenav ul li a.current {
+	padding: .5em; /* */
+	margin:  .5em; /* */
+	margin-bottom: 0em;
+	color: maroon;
+	border: 1px solid black;
+	border-bottom: 1px solid #23A7AF; /* only changes the color between the bar and content */
+	/* border-bottom: 1px solid #009999; /* #FFCC66; /* */
+}
+/*
+** This handles when the 'current' tab is hovered over
+*/
+.sitenav ul li a:hover.current {
+	color: maroon;
+	background-color: yellow; /* */
+	border: 1px solid black;
+	border-bottom: 1px solid #23A7AF; /* only changes the color between the bar and content */
+	/*border-bottom: 1px solid #009999; /* #FFCC99; /* */
+}
+
+.sitenav ul li a.other {
+}
+
+/*
+** This handles when the 'other' tab is hovered over
+*/
+.sitenav ul li a:hover.other {
+}
+
+/* ============================================================================ */
+/* NJC */
+/* ============================================================================ */
+
+.sitenav ul { /* */
+	position:relative; /* */
+	text-align:left; /* */
+/*	margin:0; padding:0; /* */
+	list-style-type:none; /* */
+}
+
+.sitenav ul li { /* */
+	position:relative; /* */
+} /* */
+
+/*
+** Hidden
+*/
+
+.sitenav ul li ul { /* */
+	visibility:hidden; /* */
+	position:absolute; /* */
+	top:1.25em; /* */
+	left:0; /* */
+	height:0;
+	overflow:hidden;
+}
+
+.sitenav ul table {
+	margin:-1px;
+	border-collapse:collapse;
+	font-size:1em; /* font size for IE5.5 */
+}
+
+/* **********
+** Hover
+*/
+
+/* first line style for IE7 and non-IE browsers and the second line for IE5.5 and IE6 */
+div.sitenav ul li:hover a,
+.sitenav ul li:hover a,
+.sitenav ul li a:hover {
+	text-decoration:underline;
+	border:0;
+}
+
+div.sitenav ul li:hover ul,
+.sitenav ul li:hover ul,
+.sitenav ul li a:hover ul {
+	visibility:visible;
+	height:auto;
+	width:10em;
+	background-color:#23A7AF; /* #FFCCAA; /* */
+	border:1px solid black;
+	left:0;
+	top: 1.25em;
+	overflow:visible;
+}
+
+div.sitenav ul li:hover ul li a,
+.sitenav ul li:hover ul li a,
+.sitenav ul li a:hover ul li a {
+	display:block;
+	font-weight:normal;
+	background-color:#23A7AF; /* #FFCCAA; /* */
+	text-decoration:none; /* */
+	height:auto;
+/*	line-height:1.5em; /* */
+	padding:0.5em;
+	width:9em;
+}
+
+
+* html .sitenav ul li a:hover ul li a {
+	width:10em;
+	w\idth:9em; /* hack for IE5.5 */
+}
+
+.sitenav ul li:hover ul li a.drop,
+.sitenav ul li a:hover ul li a.drop {
+	font-weight:bold;
+}
+
+/*
+** Hidden
+*/
+.sitenav ul li:hover ul li ul,
+.sitenav ul li a:hover ul li a ul {
+	visibility:hidden;
+	position:absolute;
+	top:0;
+	left:9.5em;
+	height:0;
+	overflow:hidden;
+}
+
+.sitenav ul li:hover ul li a:hover,
+.sitenav ul li a:hover ul li a:hover {
+	text-decoration:underline;
+}
+
+div.sitenav ul li:hover ul li:hover ul,
+.sitenav ul li:hover ul li:hover ul,
+.sitenav ul li a:hover ul li a:hover ul {
+	visibility:visible;
+	color:#000;
+	border:1px solid black;
+	height:auto;
+	background:#23A7AF; /* #FFCCAA; /* */
+	width:9.5em;
+} 
+
+.sitenav ul li:hover ul li:hover ul.left,
+.sitenav ul li a:hover ul li a:hover ul.left {
+	left:-9.3em;
+}
+
+.sitenav ul li:hover ul li:hover ul li a,
+.sitenav ul li a:hover ul li a:hover ul li a {
+	display:block;
+	height:auto;
+}
+
+.sitenav ul li:hover ul li:hover ul li:hover a,
+.sitenav ul li a:hover ul li a:hover ul li a:hover {
+	text-decoration:underline;
+}
+
+.yellow {
+  color: #FFFF00; /* */
+}
+.red {
+  color: #FF0000; /* */
+}
+.green {
+  color: #00FF00;
+}
+.blue {
+  color: #0000FF;
+}
+.italic { font-style: italic; }
+.bold { font-weight: bold; }
+
+/* =[ FD ]================================================================= */
+
+div.a1 {
+/*	border: 1px solid red;	/* */
+}
+
+div.FD {
+	float: left;
+	border-right: black 1px ;
+}
+
+.outer {
+	background:  #FDF001;
+	color:	     black;
+	margin-right: 2em; /* */
+	width: 220px;
+}
+
+/* */
+.blackout {
+	background: black;
+	color:	    white;
+	text-align: center;
+}
+
+.lt {
+	float: left;
+	width: 34%;
+	margin-top: 12px;
+	margin-bottom: 0px;
+	padding-left: 4px;
+}
+
+.lt2 {
+	border: 1px blue solid; /* */
+	margin-left: 10px;
+}
+
+.rt {
+	margin-top: 0;
+	padding-top: 0;
+	clear: right;
+}
+
+/* ======================================================================== */
+div.elinks {
+	clear: right;
+	margin-left: 17em;
+}
+
+/* ======================================================================== */
+.spacer	 {
+	clear: both;
+	height: 0em;
+ }
+
+/* ======================================================================== */
+
+.content {
+	padding: 10px;
+	padding-top: 0px;
+	margin-left: 219px;
+	border-left: 1px black solid;
+}
+
+
+.content h2 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.content h3 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.nav {
+	width: 220px;
+	float: left;
+	margin-left: -1px;
+	margin-right: 5px;
+	/* padding: 5px, 5px, 5px, 5px; */
+	padding-right: 0;
+	border-right: 1px black solid; /* */
+}
+.nav h1 {
+	margin: 5px; /* , 5px, 5px, 5px; */
+	padding: 0px; /*, 0px, 0px, 0px; */
+}
+
+.nav h2 {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.footer {
+	clear: both;/* */
+	padding: 1em;
+}
+
+.box {
+	border: 1px black solid; /* */
+}
+
+.center {
+	text-align: center;
+}
+
+p.invisible { display: none; }
+
+.codebox {
+	border: 1px black solid; /* */
+	padding: 0.5em;
+	background-color: #4fb8c0; /* FFCC99 */
+	/* font-size: 1.1em; /* */
+}
+/*
+** To emulate a terminal
+*/
+.tbox {
+ 	border: 1px white solid; /* */
+	padding: 0.5em;
+	background-color: black; 
+	color: white;
+}

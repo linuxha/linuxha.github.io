@@ -1,0 +1,21 @@
+/*
+** CSS for printing to a page
+**
+** http://www.w3.org/TR/REC-CSS2/page.html
+*/
+
+/* Don't define the page size. In Europe they may use A4, the US 8.5x11 *//
+@page { size: portrait; margin: 0.5in;}
+
+#header {
+      height: 40px; 
+      clear:both; 
+      width: 100%;
+      font-family:sans-serif;
+      font-size:19px;
+      font-weight:bold;
+}
+
+#menu { display: none; }
+
+#footer { display: none; }
